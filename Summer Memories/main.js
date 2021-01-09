@@ -285,7 +285,7 @@ function manualEdit(eventsMap) {
     'C美雪_騎乗位(等速)_0000': 'C Miyuki_Cowgirl (constant speed)_0000',
     'Dキッチン_父親1_0000': 'D Kitchen_Father 1_0000',
     'Dキッチン_父親_0000':'D Kitchen_Father_0000',
-    'Dキッチン_結衣1_0000':'D D Kitchen_Yui1_0000',
+    'Dキッチン_結衣1_0000':'D Kitchen_Yui1_0000',
     'Dキッチン_結衣_0000':'D Kitchen_Yui_0000',
     'Dキッチン_美雪1_0000':'D Kitchen_Miyuki 1_0000',
     'Dキッチン_美雪_0000':'D Kitchen_Miyuki_0000',
