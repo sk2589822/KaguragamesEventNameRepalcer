@@ -1,7 +1,7 @@
 let fs = require('fs')
 const path_target = "H:\\Steam\\steamapps\\common\\Succumate\\www\\data"
-const path_censored = "H:\\Steam\\steamapps\\common\\Succumate\\www_jp\\data"
-const path_uncensored = "H:\\Steam\\steamapps\\common\\Succumate\\www_cn\\data"
+const path_censored = "H:\\Steam\\steamapps\\common\\Succumate\\www_censored\\data"
+const path_uncensored = "H:\\Steam\\steamapps\\common\\Succumate\\www_uncensored\\data"
 const regex = /_00\d+/
 
 replaceEvents()
@@ -22,27 +22,27 @@ function replaceEvents() {
 }
 
 function getEventsMap() {
-  let commonEventsData_jp = JSON.parse(fs.readFileSync(`${path_censored}\\CommonEvents.json`, 'utf8'))
-  let commonEventsData_cn = JSON.parse(fs.readFileSync(`${path_uncensored}\\CommonEvents.json`, 'utf8'))
+  let commonEventsData_censored = JSON.parse(fs.readFileSync(`${path_censored}\\CommonEvents.json`, 'utf8'))
+  let commonEventsData_uncensored = JSON.parse(fs.readFileSync(`${path_uncensored}\\CommonEvents.json`, 'utf8'))
 
-  let commonEventsJson_jp = getCommonEvents(commonEventsData_jp)
-  let commonEventsJson_cn = getCommonEvents(commonEventsData_cn)
+  let commonEventsJson_censored = getCommonEvents(commonEventsData_censored)
+  let commonEventsJson_uncensored = getCommonEvents(commonEventsData_uncensored)
 
   let map = {}
-  for (let i = 0; i < commonEventsJson_jp.length; i++) {
-    map[commonEventsJson_jp[i]] = commonEventsJson_cn[i]
+  for (let i = 0; i < commonEventsJson_censored.length; i++) {
+    map[commonEventsJson_censored[i]] = commonEventsJson_uncensored[i]
   }
 
   for (let i = 1; i < 65; i++) {
     const fileIndex = i.toString().padStart(3, '0')
-    let mapData_jp = JSON.parse(fs.readFileSync(`${path_censored}\\Map${fileIndex}.json`, 'utf8'))
-    let mapData_cn = JSON.parse(fs.readFileSync(`${path_uncensored}\\Map${fileIndex}.json`, 'utf8'))
+    let mapData_censored = JSON.parse(fs.readFileSync(`${path_censored}\\Map${fileIndex}.json`, 'utf8'))
+    let mapData_uncensored = JSON.parse(fs.readFileSync(`${path_uncensored}\\Map${fileIndex}.json`, 'utf8'))
 
-    let mapJson_jp = getMapEvents(mapData_jp)
-    let mapJson_cn = getMapEvents(mapData_cn)
+    let mapJson_censored = getMapEvents(mapData_censored)
+    let mapJson_uncensored = getMapEvents(mapData_uncensored)
 
-    for (let i = 0; i < mapJson_jp.length; i++) {
-      map[mapJson_jp[i]] = mapJson_cn[i]
+    for (let i = 0; i < mapJson_censored.length; i++) {
+      map[mapJson_censored[i]] = mapJson_uncensored[i]
     }
   }
 
