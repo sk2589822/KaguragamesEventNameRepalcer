@@ -9,7 +9,7 @@ replaceEvents()
 
 function replaceEvents() {
   let eventsMap = getEventsMap()
-  // fs.writeFileSync(`NO.json`, JSON.stringify(eventsMap), 'utf8')
+  //fs.writeFileSync(`2.02.json`, JSON.stringify(eventsMap), 'utf8')
   eventsMap = manualEdit(eventsMap);
   let json = JSON.parse(fs.readFileSync(`${path_censored}\\CommonEvents.json`, 'utf8'))
   replaceCommon(json, eventsMap)
@@ -271,7 +271,7 @@ function manualEdit(eventsMap) {
     'C美雪_授乳手コキ(加速)_0000': 'C Miyuki_Nursing Handjob (acceleration)_0000',
     'C美雪_授乳手コキ(加速)_0004': 'C Miyuki_Nursing Handjob (acceleration)_0004',
     'C美雪_授乳手コキ(待機)_0000': 'C Miyuki_Nursing Handjob (standby)_0000',
-    'C美雪_授乳手コキ(待機)_0000': 'C Miyuki_Piledriver (Standby)_0000',
+    'C美雪_授乳手コキ(待機)_0000': 'C Miyuki_Nursing Handjob (Standby)_0000',
     'C美雪_授乳手コキ(等速)_0000': 'C Miyuki_Nursing Handjob (constant speed)_0000',
     'C美雪_正常位(やり捨て)_0000': 'C Miyuki_Missionary position (cancel)_0000',
     'C美雪_正常位(加速)_0000': 'C Miyuki_Missionary position (acceleration)_0000',
