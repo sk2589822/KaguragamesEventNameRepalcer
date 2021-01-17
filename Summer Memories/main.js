@@ -2,7 +2,7 @@ let fs = require('fs')
 const path_target = "H:\\Steam\\steamapps\\common\\Summer Memories\\www\\data"
 const path_censored = "H:\\Steam\\steamapps\\common\\Summer Memories\\www_censored\\data"
 const path_uncensored = "H:\\Steam\\steamapps\\common\\Summer Memories\\www_uncensored\\data"
-const regex = /_0\d+/
+const regex = /_0\d+$/
 const mapsCount = 119
 
 replaceEvents()
@@ -144,7 +144,7 @@ function manualEdit(eventsMap) {
     'B莉音_イラマ(等速)_0004': 'B Rion_Irama (constant speed)_0004',
     'B莉音_オナニー2_0000': 'B Rion_Masturbation 2_0000',
     'B莉音_オナニー_0000': 'B Rion_Masturbation_0000',
-    'B莉音_トイレ(やり捨て)_0000': 'B Rion_Toilet (cancel)_0000',
+    'B莉音_トイレ(やり捨て)_0000': 'B Rion_Toilet general purpose (cancel)_0000',
     'B莉音_トイレ(加速)_0000': 'B Rion_Toilet (acceleration)_0000',
     'B莉音_トイレ(加速)_0004': 'B Rion_Toilet (acceleration)_0004',
     'B莉音_トイレ(待機)_0000': 'B Rion_Toilet (standby)_0000',
@@ -943,6 +943,9 @@ function manualEdit(eventsMap) {
     'ミズキ_立ちえっちP_0004': 'Mizuki_StandingP_0004',
     'ミズキ_立ちえっちP_se_0000': 'ミズキ_立ちえっちP_se_0000',
     'メンタイカー演出2_0000': 'メンタイカー演出2_0000',
+    "フェラカットイン(美雪)_1":"Blow cut-in (Miyuki)_1",
+    "フェラカットイン(美雪)_2":"Blow cut-in (Miyuki)_2",
+    "フェラカットイン(美雪)_3":"Blow Cut-in (Miyuki)_3",
     '主人公1_0000': '主人公1_0000',
     '主人公3_0000': '主人公3_0000',
     '主人公4_0000': '主人公4_0000',
