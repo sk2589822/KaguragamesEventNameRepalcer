@@ -2,15 +2,15 @@ let fs = require('fs')
 const path_target = "H:\\Steam\\steamapps\\common\\Summer Memories\\www\\data"
 const path_censored = "H:\\Steam\\steamapps\\common\\Summer Memories\\www_censored\\data"
 const path_uncensored = "H:\\Steam\\steamapps\\common\\Summer Memories\\www_uncensored\\data"
-const regex = /_0\d+$/
+const regex = /(_0\d+|フェラカットイン\(美雪\)_\d|Blow cut-in \(Miyuki\)_\d)$/
 const mapsCount = 119
 
 replaceEvents()
 
 function replaceEvents() {
   let eventsMap = getEventsMap()
-  //fs.writeFileSync(`2.02.json`, JSON.stringify(eventsMap), 'utf8')
   eventsMap = manualEdit(eventsMap);
+  //fs.writeFileSync(`2.02.1.json`, JSON.stringify(eventsMap), 'utf8')
   let json = JSON.parse(fs.readFileSync(`${path_censored}\\CommonEvents.json`, 'utf8'))
   replaceCommon(json, eventsMap)
   fs.writeFileSync(`${path_target}\\CommonEvents.json`, JSON.stringify(json), 'utf8')
@@ -140,7 +140,7 @@ function manualEdit(eventsMap) {
     'B莉音_イラマ(等速)_0004': 'B Rion_Irama (constant speed)_0004',
     'B莉音_オナニー2_0000': 'B Rion_Masturbation 2_0000',
     'B莉音_オナニー_0000': 'B Rion_Masturbation_0000',
-    'B莉音_トイレ(やり捨て)_0000': 'B Rion_Toilet general purpose (cancel)_0000',
+    'B莉音_トイレ汎用(やり捨て)_0000': 'B Rion_Toilet general purpose (cancel)_0000',
     'B莉音_トイレ(加速)_0000': 'B Rion_Toilet (acceleration)_0000',
     'B莉音_トイレ(加速)_0004': 'B Rion_Toilet (acceleration)_0004',
     'B莉音_トイレ(待機)_0000': 'B Rion_Toilet (standby)_0000',
@@ -967,12 +967,16 @@ function manualEdit(eventsMap) {
     '結衣_立ちえっちF_0004': 'Yui_Standing ecchi F_0004',
     '結衣_立ちえっちH_0000': 'Yui_Standing ecchi H_0000',
     '結衣_立ちえっちH_0004': 'Yui_Standing ecchi H_0004',
-    '結衣_立ちえっちH射精_0000': 'Yui_Standing ecchi H Ejaculation_0000',
+    '結衣_立ちえっちH射精_0000': 'Yui_c_0000',
     '結衣_立ちえっちP_0000': 'Yui_Standing ecchi P_0000',
     '結衣_立ちえっちP_0004': 'Yui_Standing ecchi P_0004',
     '結衣_立ちえっち裸_0000': 'Yui_Standing ecchi naked_0000',
     '結衣_立ちえっち裸_0004': 'Yui_Standing ecchi naked_0004',
     '結衣_立ちえっち裸射精_0000_0000': 'Yui_Standing ecchi naked Ejaculation_0000_0000',
+    "美雪CG1_2_0006": "Miyuki CG1_2_0006",
+    "美雪CG4_0002": "Miyuki CG4_0002",
+    "美雪CG4_0005": "Miyuki CG4_0005",
+    "美雪CG5_0009": "Miyuki CG5_0009",
     '美雪(コス)_立ちえっちF_0000': 'Misuyuki(Kos)_StandingF_0000',
     '美雪(コス)_立ちえっちF_0004': 'Misuyuki(Kos)_StandingF_0004',
     '美雪(コス)_立ちえっちH_0000': 'Misuyuki(Kos)_StandingH_0000',
@@ -989,7 +993,7 @@ function manualEdit(eventsMap) {
     '美雪_立ちえっちP_0004': 'Miyuki_Standing ecchi P_0004',
     '美雪_立ちえっち裸_0000': 'Miyuki_Standing ecchi naked_0000',
     '美雪_立ちえっち裸_0004': 'Miyuki_Standing ecchi naked_0004',
-    '美雪_立ちえっち裸射精_0000_0000': 'Miyuki_Standing ecchi naked Ejaculation_0000_0000',
+    '美雪_立ちえっち裸射精_0000': 'Miyuki_Standing ecchi naked Ejaculation_0000',
     '莉音(コス)_立ちえっちH_0000': 'Rion(Kos)_StandingH_0000',
     '莉音(コス)_立ちえっちH_0004': 'Rion(Kos)_StandingH_0004',
     '莉音(コス)_立ちえっちH射精_0000': 'Rion(Cos)_StandingClock_0000',
